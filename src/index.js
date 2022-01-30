@@ -43,9 +43,9 @@ Date.prototype.getFullYear = () => CURRENT_YEAR
     assert.deepEqual(employee.gender, undefined)
     assert.deepEqual(employee.grossPay, 'R$ 5.000,40')
     assert.deepEqual(employee.netPay, Util.formatCurrency(4000.32))
-
-    const expectedBirthYear = 2002
-    assert.deepEqual(employee.birthYear, expectedBirthYear)
+    //MOCK
+   // const expectedBirthYear = 2002
+  //  assert.deepEqual(employee.birthYear, expectedBirthYear)
 
     //Não tem set não vai mudar!!!
     employee.birthYear = new Date().getFullYear() -80
@@ -70,8 +70,9 @@ Date.prototype.getFullYear = () => CURRENT_YEAR
      assert.deepEqual(manager.name, 'Mr. Singed')//com metodo acessor passa de acordo com a chamativa
      assert.deepEqual(manager.age, undefined)//sem metodo acesso só passa como undefined 
      assert.deepEqual(manager.gender, undefined)
-     assert.deepEqual(manager.birthYear, 1942)
+   //  assert.deepEqual(manager.birthYear, 1942)
      assert.deepEqual(manager.grossPay,Util.formatCurrency(4000.32))
      assert.deepEqual(manager.bonuses,Util.formatCurrency(2000.00))
+     assert.deepEqual(manager.netPay, 0)
 
     }

@@ -6,6 +6,13 @@ class Manager extends Employee{
     get bonuses(){
         return Util.formatCurrency(this.#bonuses)
     }
+
+    get netPay(){
+        const finalValue = 
+        Util.unformatCurrency(super.netPay) + Util.unformatCurrency(this.bonuses);
+        //neyPay + bonuses 
+        return Util.formatCurrency(finalValue);
+    }
 }
 
 module.exports = Manager;
